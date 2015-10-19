@@ -1,0 +1,61 @@
+{
+  "run": [
+    {
+      "filePath": "/cordovaDemo/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [
+        {
+          "paramName": "",
+          "paramValue": "",
+          "paramActive": false
+        },
+        {
+          "paramName": "",
+          "paramValue": "",
+          "paramActive": false
+        }
+      ],
+      "hashParameter": "",
+      "backendSystem": [
+        {
+          "source": "demo_odata",
+          "destinations": "demo_odata"
+        }
+      ],
+      "destBackendSystem": [
+        "ES4_MOB602",
+        "FIE",
+        "ES1_MOB602",
+        "es6",
+        "M51_2",
+        "es5",
+        "es1",
+        "M51op",
+        "M20",
+        "ES4_EPM_OData",
+        "es1_CLONING21",
+        "ES1_MOB6021",
+        "ES1_MOB6022",
+        "FIE2",
+        "GM6",
+        "ES4_2",
+        "GWN",
+        "M20_2",
+        "ces1",
+        "TECHED",
+        "es4_nouser2",
+        "GM4"
+      ],
+      "_metadata": {
+        "id": 4982287,
+        "runnerId": "webapprunner",
+        "displayName": "New Web Application 8"
+      }
+    }
+  ]
+}

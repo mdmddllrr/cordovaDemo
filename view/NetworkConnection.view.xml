@@ -1,0 +1,25 @@
+<core:View controllerName="CordovaKapselSample.view.NetworkConnection" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page id="connection-page" navButtonPress="navBack" showNavButton="{device>/isPhone}" title="NetworkConnection">
+		<headerContent>
+			<Button icon="sap-icon://syntax" press="ViewCodeSample" tooltip="Show Code"/>
+		</headerContent>
+		<content>
+			<Panel>
+				<headerToolbar>
+					<Toolbar>
+						<Title level="H3" text="Cordova Network Connection Plugin API"/>
+					</Toolbar>
+				</headerToolbar>
+				<VBox alignItems="Center">
+					<Button id="connectionButton" press="checkConnection" text="Check connection"/>
+				</VBox>
+				<l:VerticalLayout class="marginVerticalContent" width="100%">
+					<l:content>
+						<TextArea editable="false" id="results" rows="10" value="" width="100%"/>
+					</l:content>
+				</l:VerticalLayout>
+			</Panel>
+		</content>
+	</Page>
+</core:View>

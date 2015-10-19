@@ -1,0 +1,30 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="CordovaKapselSample.view.ViewCode"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{/title}" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<IconTabBar class="iconTabBarPaddingTop" expandable="false" selectedKey="{/selectedTab}">
+			    <items>
+			        <IconTabFilter
+					key="view"
+					text="View"
+					icon="sap-icon://internet-browser"
+					visible="{/showView}" >
+					<content>
+						<core:HTML content="{/viewCode}" />
+					</content>
+				</IconTabFilter>
+				<IconTabFilter
+					key="controller"
+					text="Controller"
+					icon="sap-icon://syntax"
+					visible="{/showController}" >
+					<content>
+						<core:HTML content="{/controllerCode}" />
+					</content>
+				</IconTabFilter>
+			    </items>
+			</IconTabBar>
+			<!--  <core:HTML content="{/controllerCode}"/> -->
+		</content>
+	</Page>
+</core:View>

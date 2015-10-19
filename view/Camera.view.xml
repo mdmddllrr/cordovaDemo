@@ -1,0 +1,30 @@
+<core:View controllerName="CordovaKapselSample.view.Camera" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page id="camera-page" navButtonPress="navBack" showNavButton="{device>/isPhone}" title="Camera">
+		<headerContent>
+			<Button icon="sap-icon://syntax" press="ViewCodeSample" tooltip="Show Code"/>
+		</headerContent>
+		<content>
+			<Panel>
+				<headerToolbar>
+				    <Toolbar>
+				        <Title level="H3" text="Cordova Camera Plugin API" />
+				    </Toolbar>
+				</headerToolbar>
+				<FlexBox alignItems="Start" justifyContent="Center">
+					<items>
+						<Button press="invokeCamera" type="Emphasized" text="Take Photo" class="sapUiSmallMarginEnd"/>
+						<Button press="readGallery" type="Emphasized" text="Pick Gallery" class="sapUiSmallMarginEnd"/>
+						<Button press="cleanUp" type="Emphasized" text="Cleanup" class="sapUiSmallMarginEnd"/>
+					</items>
+				</FlexBox>
+			
+				<VBox alignItems="Center">
+					<items>
+						<Image densityAware="false" id="pict"></Image>
+					</items>
+				</VBox>
+			</Panel>
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,391 @@
+{
+  "dataBinding": {
+    "/view/Master.view.xml": {
+      "entitySet": "SOHeaders"
+    },
+    "/view/Detail.view.xml": {
+      "entitySet": "SOHeaders"
+    },
+    "/view/NotFound.view.xml": {
+      "entitySet": "UNBINDKEY"
+    },
+    "/view/App.view.xml": {
+      "entitySet": "UNBINDKEY"
+    }
+  },
+  "generation": [
+    {
+      "templateId": "ui5template.fioriMasterDetailKapsel",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Wed, 10 Jun 2015 07:21:05 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Sun, 14 Jun 2015 04:36:56 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Tue, 16 Jun 2015 07:15:43 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/SALESORDERXX",
+    "metadataFilePath": "model/metadata.xml",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "build": {
+    "buildRequired": true
+  },
+  "hcpdeploy": {
+    "account": "d019984trial",
+    "name": "cordovademo",
+    "lastVersionWeTriedToDeploy": "1.0.0"
+  },
+  "hybrid": {
+    "appname": "CordovaSample",
+    "appid": "com.sample.app1",
+    "appdesc": "",
+    "appversion": "0.0.1",
+    "debugMode": false,
+    "appIcon": {
+      "defaultIcon": "",
+      "ios": {
+        "ios8Iphone": "",
+        "ios7Iphone": "",
+        "ios7Ipad": "",
+        "ios61Iphone": "",
+        "ios61Ipad": ""
+      },
+      "android": {
+        "ldpi": "",
+        "mdpi": "",
+        "hdpi": "",
+        "xhdpi": ""
+      }
+    },
+    "appSplash": {
+      "enable": true,
+      "defaultSplash": "",
+      "useDefault": true,
+      "delayTime": "1000",
+      "ios": {
+        "iphone": "",
+        "iphone2x": "",
+        "portIpad": "",
+        "portIpad2x": "",
+        "landIpad": "",
+        "landIpad2x": "",
+        "iphone52x": "",
+        "iphone6": "",
+        "iphone6plus": ""
+      },
+      "android": {
+        "landhdpi": "",
+        "porthdpi": "",
+        "landldpi": "",
+        "portldpi": "",
+        "landmdpi": "",
+        "portmdpi": "",
+        "landxhdpi": "",
+        "portxhdpi": ""
+      }
+    },
+    "localBuild": {
+      "useCustomLib": false,
+      "customLibFile": ""
+    },
+    "cloudBuild": {
+      "selected": false,
+      "buildType": "fioriClient",
+      "androidSigning": "",
+      "iosSigning": "",
+      "fioriClient": {
+        "launchUrl": "",
+        "defaultIconData": "",
+        "defaultSplashData": ""
+      }
+    },
+    "msType": 0,
+    "server": "",
+    "port": "",
+    "hcpmsServer": "mobile-xbafc2b25.neo.ondemand.com",
+    "hybridRevision": "0",
+    "platform": {
+      "ios": {
+        "selected": false,
+        "preferences": {
+          "Fullscreen": false,
+          "Orientation": "default",
+          "EnableViewportScale": false,
+          "UrlScheme": ""
+        }
+      },
+      "android": {
+        "selected": true,
+        "preferences": {
+          "Fullscreen": false,
+          "Orientation": "default",
+          "ShowTitle": false,
+          "LogLevel": "VERBOSE",
+          "LoadUrlTimeout": "20000",
+          "UrlScheme": ""
+        }
+      },
+      "windows": {
+        "selected": false,
+        "preferences": {
+          "Fullscreen": false,
+          "Orientation": "",
+          "ShowTitle": false,
+          "LogLevel": ""
+        }
+      }
+    },
+    "plugins": {
+      "cordova": {
+        "device": {
+          "selected": true,
+          "registry": "org.apache.cordova.device",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "network": {
+          "selected": true,
+          "registry": "org.apache.cordova.network-information",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "battery": {
+          "selected": false,
+          "registry": "org.apache.cordova.battery-status",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "accelerometer": {
+          "selected": true,
+          "registry": "org.apache.cordova.device-motion",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "comprass": {
+          "selected": true,
+          "registry": "org.apache.cordova.device-orientation",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "geolocation": {
+          "selected": true,
+          "registry": "org.apache.cordova.geolocation",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "camera": {
+          "selected": true,
+          "registry": "org.apache.cordova.camera",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "capture": {
+          "selected": true,
+          "registry": "org.apache.cordova.media-capture",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "media": {
+          "selected": true,
+          "registry": "org.apache.cordova.media",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "file": {
+          "selected": true,
+          "registry": "org.apache.cordova.file",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "transfer": {
+          "selected": true,
+          "registry": "org.apache.cordova.file-transfer",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "dialogs": {
+          "selected": true,
+          "registry": "org.apache.cordova.dialogs",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "vibration": {
+          "selected": true,
+          "registry": "org.apache.cordova.vibration",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "contacts": {
+          "selected": true,
+          "registry": "org.apache.cordova.contacts",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "globalization": {
+          "selected": true,
+          "registry": "org.apache.cordova.globalization",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "splashscreen": {
+          "selected": true,
+          "registry": "org.apache.cordova.splashscreen",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "inappbrowser": {
+          "selected": true,
+          "registry": "org.apache.cordova.inappbrowser",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "console": {
+          "selected": true,
+          "registry": "org.apache.cordova.console",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "statusbar": {
+          "selected": false,
+          "registry": "org.apache.cordova.statusbar",
+          "localBuild": false,
+          "fioriClient": true
+        }
+      },
+      "kapsel": {
+        "logon": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.logon",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "appupdate": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.appupdate",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "logger": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.logger",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "settings": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.settings",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "push": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.push",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "encryptedstorage": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.encryptedstorage",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "authproxy": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.authproxy",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "barcode": {
+          "selected": true,
+          "registry": "com.sap.mp.cordova.plugins.barcodescanner",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "odata": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.odata",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "e2etrace": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.e2etrace",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "calendar": {
+          "selected": true,
+          "registry": "nl.x-services.plugins.calendar",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "voicerecord": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.voicerecording",
+          "localBuild": true,
+          "fioriClient": true
+        },
+        "inappmsg": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.inappmsg",
+          "localBuild": true,
+          "fioriClient": false
+        },
+        "apppreferences": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.apppreferences",
+          "localBuild": false,
+          "fioriClient": true
+        },
+        "attachmentviewer": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.attachmentviewer",
+          "localBuild": false,
+          "fioriClient": true
+        },
+        "cachemanager": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.cachemanager",
+          "localBuild": false,
+          "fioriClient": true
+        },
+        "printer": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.print",
+          "localBuild": false,
+          "fioriClient": true
+        },
+        "onlineapps": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.online",
+          "localBuild": false,
+          "fioriClient": true
+        },
+        "toolbar": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.toolbar",
+          "localBuild": false,
+          "fioriClient": true
+        }
+      },
+      "custom": {}
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="CordovaKapselSample.view.GeoLocation" xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="GeoLocation" id="map-page" showNavButton="{device>/isPhone}" navButtonPress="navBack">
+		<headerContent>
+			<Button icon="sap-icon://syntax" tooltip="Show Code" press="ViewCodeSample"/>
+		</headerContent>
+		<content>
+		<Panel>
+		    <headerToolbar>
+		        <Toolbar>
+		            <Title level="H3" text="Cordova GeoLocation Plugin API" />
+		        </Toolbar>
+		    </headerToolbar>
+		    <VBox alignItems="Center">
+				<Button text="Get current location information" width="300px" id="refreshButton" press="refreshWatch"/>
+				<Button text="Start Watch" id="startButton" width="300px" press="startWatch"/>
+				<Button text="Stop Watch" id="stopButton" width="300px" press="stopWatch"/>
+			</VBox>
+			<l:VerticalLayout class="marginVerticalContent" width="100%">
+				<l:content>
+					<TextArea value="" rows="10" width="100%" id="results" editable="false"/>
+				</l:content>
+			</l:VerticalLayout>
+		</Panel>
+		
+		</content>
+	</Page>
+</core:View>

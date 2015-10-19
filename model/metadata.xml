@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="SALESORDERXX" xml:lang="en"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="SOHeader" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="OrderId"/>
+                </Key>
+                <Property Name="OrderId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Document"/>
+                <Property Name="DocumentType" Type="Edm.String" MaxLength="4" sap:label="Sales Doc. Type"/>
+                <Property Name="DocumentDate" Type="Edm.DateTime" sap:label="Document Date"/>
+                <Property Name="CustomerId" Type="Edm.String" MaxLength="10" sap:label="Sold-to party"/>
+                <Property Name="SalesOrg" Type="Edm.String" MaxLength="4" sap:label="Sales Org."/>
+                <Property Name="DistChannel" Type="Edm.String" MaxLength="2" sap:label="Distr. Channel"/>
+                <Property Name="Division" Type="Edm.String" MaxLength="2" sap:label="Division"/>
+                <Property Name="OrderValue" Type="Edm.Decimal" Precision="15" Scale="2" sap:label="Net value"/>
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Doc. Currency" sap:semantics="currency-code"/>
+                <NavigationProperty Name="SOItems" Relationship="SALESORDERXX.SOHeader_SOItems" FromRole="FromRole_SOHeader_SOItems" ToRole="ToRole_SOHeader_SOItems"/>
+            </EntityType>
+            <EntityType Name="SOItem" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="OrderId"/>
+                    <PropertyRef Name="Item"/>
+                </Key>
+                <Property Name="OrderId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Document"/>
+                <Property Name="Item" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Item"/>
+                <Property Name="Material" Type="Edm.String" MaxLength="18" sap:label="Material"/>
+                <Property Name="Description" Type="Edm.String" MaxLength="40" sap:label="Description"/>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" sap:label="Plant"/>
+                <Property Name="Quantity" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Order quantity"/>
+                <Property Name="UoM" Type="Edm.String" MaxLength="3" sap:label="Sales unit" sap:semantics="unit-of-measure"/>
+                <Property Name="Value" Type="Edm.Decimal" Precision="15" Scale="2" sap:label="Net value"/>
+                <NavigationProperty Name="SOHeader" Relationship="SALESORDERXX.SOItem_SOHeader" FromRole="FromRole_SOItem_SOHeader" ToRole="ToRole_SOItem_SOHeader"/>
+            </EntityType>
+            <Association Name="SOItem_SOHeader" sap:content-version="1">
+                <End Type="SALESORDERXX.SOItem" Multiplicity="1" Role="FromRole_SOItem_SOHeader"/>
+                <End Type="SALESORDERXX.SOHeader" Multiplicity="1" Role="ToRole_SOItem_SOHeader"/>
+            </Association>
+            <Association Name="SOHeader_SOItems" sap:content-version="1">
+                <End Type="SALESORDERXX.SOHeader" Multiplicity="1" Role="FromRole_SOHeader_SOItems"/>
+                <End Type="SALESORDERXX.SOItem" Multiplicity="*" Role="ToRole_SOHeader_SOItems"/>
+            </Association>
+            <EntityContainer Name="SALESORDERXX" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="SOHeaders" EntityType="SALESORDERXX.SOHeader" sap:content-version="1"/>
+                <EntitySet Name="SOItems" EntityType="SALESORDERXX.SOItem" sap:content-version="1"/>
+                <AssociationSet Name="SOHeader_SOItems_AssocSet" Association="SALESORDERXX.SOHeader_SOItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SOHeaders" Role="FromRole_SOHeader_SOItems"/>
+                    <End EntitySet="SOItems" Role="ToRole_SOHeader_SOItems"/>
+                </AssociationSet>
+                <AssociationSet Name="SOItem_SOHeader_AssocSet" Association="SALESORDERXX.SOItem_SOHeader" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SOItems" Role="FromRole_SOItem_SOHeader"/>
+                    <End EntitySet="SOHeaders" Role="ToRole_SOItem_SOHeader"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="https://relint-xbafc2b25.dispatcher.neo.ondemand.com/destinations/demo_odata/sap/SALESORDERXX/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link rel="latest-version" href="https://relint-xbafc2b25.dispatcher.neo.ondemand.com/destinations/demo_odata/sap/SALESORDERXX/$metadata"
+                    xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

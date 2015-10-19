@@ -1,0 +1,38 @@
+<mvc:View 
+    controllerName="CordovaKapselSample.view.Master"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:footerbar="sap.ushell.ui.footerbar">
+    <Page 
+        id="masterPage" 
+        title="{i18n>masterTitle}">
+        <content>
+             <List id="list" noDataText="Drop list items here">
+                <items>
+                    <StandardListItem press="handlecamera" type="Navigation"  title="Camera" description="Camera Plugin" icon="sap-icon://camera"></StandardListItem>
+                    <StandardListItem press="handlecontacts" type="Navigation"  title="Contacts" description="Contacts Plugin" icon="sap-icon://contacts"></StandardListItem>
+                    <StandardListItem press="handleBarcode" type="Navigation"  title="Barcode " description="Kapsel Barcode Plugin " icon="sap-icon://bar-code"></StandardListItem>
+ 
+                    <StandardListItem press="handlelocation" type="Navigation"  title="Geolocation" description="Geolocation Plugin" icon="sap-icon://functional-location"></StandardListItem>
+                    <StandardListItem press="handleconnection" type="Navigation"  title="Network Connection" description="Network Connection Plugin" icon="sap-icon://world"></StandardListItem>
+
+              
+                </items>
+            </List>
+        </content>
+        <footer
+            id="masterFooter">
+            <Toolbar 
+                id="masterToolbar">
+                <content>
+                    <footerbar:SettingsButton 
+                        id="settingsButton" 
+                        icon="sap-icon://action-settings" 
+                        tooltip="Help">
+                    </footerbar:SettingsButton>
+                </content>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

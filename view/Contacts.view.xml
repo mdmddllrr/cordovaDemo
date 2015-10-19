@@ -1,0 +1,34 @@
+<sap.ui.core.mvc:View controllerName="CordovaKapselSample.view.Contacts" xmlns:sap.ui.core.mvc="sap.ui.core.mvc" xmlns:sap.ui.core="sap.ui.core" xmlns="sap.m">
+	<Page id="contacts-page" navButtonPress="navBack" showNavButton="{device>/isPhone}" title="Contacts Plugin Example">
+		<headerContent>
+			<Button icon="sap-icon://syntax" press="ViewCodeSample" tooltip="Show Code"/>
+		</headerContent>
+		<content>
+			<Panel>
+			<headerToolbar>
+				    <Toolbar>
+				        <Title level="H3" text="Cordova Contacts Plugin API" />
+				    </Toolbar>
+				</headerToolbar>
+				<FlexBox alignItems="Start" justifyContent="Center">
+				    <items>
+						<Button press="newContact" type="Emphasized" text="Create" class="sapUiSmallMarginEnd" width="130px" />				    
+				        <Button press="readContacts" type="Emphasized" text="Read Contacts" class="sapUiSmallMarginEnd" width="130px" />
+				    </items>
+				</FlexBox>
+				<FlexBox alignItems="Start" justifyContent="Center">
+				    <items>
+						<Button press="pickContacts" type="Emphasized" text="Pick Contact" class="sapUiSmallMarginEnd" width="130px" />
+						<Button press="deleteContact" type="Emphasized" text="Delete Contact" class="sapUiSmallMarginEnd" width="130px" />
+				    </items>
+				</FlexBox>
+				
+				<List id="listContact" items="{data>/contacts}" noDataText="Contacts list empty">
+					<items>
+						<StandardListItem description="{data>phoneNumber}" title="{data>displayName}" ></StandardListItem>
+					</items>
+				</List>
+			</Panel>
+		</content>
+	</Page>
+</sap.ui.core.mvc:View>

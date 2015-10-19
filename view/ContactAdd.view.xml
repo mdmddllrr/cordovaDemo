@@ -1,0 +1,50 @@
+<sap.ui.core.mvc:View controllerName="CordovaKapselSample.view.ContactAdd"
+    xmlns="sap.m"
+    xmlns:sap.ui.core="sap.ui.core" xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <Page title="New Contact">
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Button text="Cancel" type="Back" press="navBack"></Button>
+                </contentLeft>
+                <contentMiddle>
+                    <Label text="New Contact"></Label>
+                </contentMiddle>
+                <contentRight>
+                    <Button text="Done" type="Emphasized" press="saveContact"></Button>
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <content>
+            <List id="list0" noDataText="No data">
+                <items>
+                    <InputListItem id="item0"  label="FirstName">
+                        <content>
+                            <Input id="firstname" width="100%" placeholder="first Name"></Input>
+                        </content>
+                    </InputListItem>
+                    <InputListItem id="item4"  label="LastName">
+                        <content>
+                            <Input id="lastname" width="100%" placeholder="last Name"></Input>
+                        </content>
+                    </InputListItem>                    
+                    <InputListItem id="item1"  label="Phone">
+                        <content>
+                            <Input id="phone" width="100%" placeholder="Phone Number" type="Tel"></Input>
+                        </content>
+                    </InputListItem>
+                    <InputListItem id="item2"  label="Email">
+                        <content>
+                            <Input id="email" width="100%" placeholder="email address" type="Email"></Input>
+                        </content>
+                    </InputListItem>
+                    <InputListItem id="item3"  label="Website">
+                        <content>
+                            <Input id="web" width="100%" placeholder="Url" type="Url"></Input>
+                        </content>
+                    </InputListItem>
+                </items>
+            </List>
+        </content>
+    </Page>
+</sap.ui.core.mvc:View>

@@ -1,0 +1,29 @@
+<core:View controllerName="CordovaKapselSample.view.BarcodeScanner" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page id="camera-page" navButtonPress="navBack" showNavButton="{device>/isPhone}" title="Barcode">
+		<headerContent>
+			<Button icon="sap-icon://syntax" press="ViewCodeSample" tooltip="Show Code"/>
+		</headerContent>
+		<content>
+			<Panel>
+				<headerToolbar>
+				    <Toolbar>
+				        <Title level="H3" text="Cordova Barcode Scan Plugin API" />
+				    </Toolbar>
+				</headerToolbar>
+				<FlexBox alignItems="Start" justifyContent="Center">
+					<items>
+				        <Button id="barCodeScan" type="Emphasized" text="Scan" press="onScan" class="sapUiSmallMarginEnd"></Button>
+				        <Button id="generateCode" type="Emphasized" text="Encode" press="onEncode" class="sapUiSmallMarginEnd"></Button>
+				        
+		          	</items>
+				</FlexBox>
+				<VBox alignItems="Center">
+					<items>
+						<Image densityAware="false" id="pict"></Image>
+					</items>
+				</VBox>
+			</Panel>
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,41 @@
+<core:View controllerName="CordovaKapselSample.view.GenerateQRCode" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m">
+	<Page navButtonPress="navBack" showNavButton="true" title="Generate QRCode">
+		<content>
+			<RadioButtonGroup columns="5" select="onRBSelected" id="rbGroup">
+				<buttons>
+					<RadioButton text="Text"/>
+					<RadioButton text="Email"/>
+					<RadioButton text="SMS"/>
+				</buttons>
+			</RadioButtonGroup>
+			<sap.ui.layout.form:SimpleForm editable="false" id="freeTextFrm" layout="ResponsiveGridLayout" xmlns:sap.ui.layout.form="sap.ui.layout.form">
+				<sap.ui.layout.form:content>
+					<Label text="Free Text"/>
+					<TextArea id="txtFreeContent" placeholder="Enter free text to generate QRCode"/>
+				</sap.ui.layout.form:content>
+			</sap.ui.layout.form:SimpleForm>
+			<sap.ui.layout.form:SimpleForm editable="false" id="emailFrm" layout="ResponsiveGridLayout" xmlns:sap.ui.layout.form="sap.ui.layout.form">
+				<sap.ui.layout.form:content>
+					<Label text="E-mail Address"/>
+					<Input id="email" placeholder="email address" type="Email"></Input>
+					<Label text="Subject"/>
+					<Input id="emailsub" placeholder="Subject" width="100%"></Input>
+					<Label text="Message"/>
+					<TextArea id="emailmsg" placeholder="Message"/>
+				</sap.ui.layout.form:content>
+			</sap.ui.layout.form:SimpleForm>
+			<sap.ui.layout.form:SimpleForm editable="false" id="smsFrm" layout="ResponsiveGridLayout" xmlns:sap.ui.layout.form="sap.ui.layout.form">
+				<sap.ui.layout.form:content>
+					<Label text="Mobile Number"/>
+					<Input id="smsphone" placeholder="Mobile Number" type="Tel"></Input>
+					<Label text="SMS Message"/>
+					<TextArea id="smsmsg" placeholder="SMS Message"/>
+				</sap.ui.layout.form:content>
+			</sap.ui.layout.form:SimpleForm>
+			<Button text="Generate" press="onGenerate"/>
+			<Text id="qrcode" text="" />
+			
+		</content>
+	</Page>
+</core:View>

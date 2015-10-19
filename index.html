@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>CordovaKapselSample</title>
+
+		<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m,sap.ui.unified"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{"CordovaKapselSample": "./"}'>
+		</script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+		/*	jQuery.sap.require("CordovaKapselSample.dev.devapp");
+			function getUrlParameterName(sParam)
+			{
+				var sPageURL = window.location.search.substring(1);
+				var sURLVariables = sPageURL.split('&');
+				for (var i = 0; i < sURLVariables.length; i++) 
+				{
+					var sParameterName = sURLVariables[i].split('=');
+					if (sParameterName[0] == sParam) 
+					{
+						return true;
+					}
+				}
+				return false;
+			} */
+		//	function startApp() {
+				sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+						app: new sap.ui.core.ComponentContainer({
+							height : "100%",
+							name : "CordovaKapselSample"
+						})
+					}).placeAt("content");
+				});
+	//		}
+	/*		window.onload = function() {
+				if (window.cordova || getUrlParameterName("companionbuster")) {
+					CordovaKapselSample.dev.devapp.initialize();
+				}
+				else {
+					startApp();
+				}
+			} */
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>
